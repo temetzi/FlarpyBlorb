@@ -24,10 +24,10 @@ public class LogicScript : MonoBehaviour
         SpeedIncrease();
     }
 
-    public void restartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    // public void restartGame()
+    // {
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    // }
 
     public void gameOver()
     {
