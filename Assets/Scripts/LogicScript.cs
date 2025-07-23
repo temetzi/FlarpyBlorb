@@ -32,6 +32,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        AudioManager.Instance.playSFX("GameOver");
         winScore.text = "Score: " + playerScore.ToString();
         gameOverScreen.SetActive(true);
         scoreBoard.SetActive(false);
@@ -41,6 +42,6 @@ public class LogicScript : MonoBehaviour
     public void SpeedIncrease()
     {
         moveSpeed += SpeedToAdd;
-        Debug.Log(moveSpeed);
+        
     }
 }
