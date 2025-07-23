@@ -13,6 +13,7 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject scoreBoard;
     public int moveSpeed = 15;
+    public int SpeedToAdd;
     
 
     [ContextMenu("Increase Score")]
@@ -39,6 +40,7 @@ public class LogicScript : MonoBehaviour
     
     public void SpeedIncrease()
     {
-        moveSpeed = moveSpeed + (int)1;
+        moveSpeed += SpeedToAdd;
+        Debug.Log(moveSpeed);
     }
 }

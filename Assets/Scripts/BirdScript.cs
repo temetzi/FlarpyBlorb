@@ -10,6 +10,7 @@ public class BirdScript : MonoBehaviour
     public LogicScript logic;
     public bool birdIsAlive = true;
     public GameObject SpaceToStart;
+    public GameObject PauseMenu;
     
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,20 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive == true) 
+        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive == true || Input.GetMouseButtonDown(0) && birdIsAlive == true && Time.timeScale == 1f)
         {
+            
             Time.timeScale = 1;
             SpaceToStart.SetActive(false);
             myRigidBody.velocity = Vector2.up * flapStrength;
+            PauseMenu.SetActive(true);
+            Debug.Log("mouse1");
+            
         }
+        
+        
+
+        
         
     }
 
